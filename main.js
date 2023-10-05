@@ -70,7 +70,6 @@ function weather() {
                         document.body.classList.add('body_rain')
                     }
                 }
-                // console.log(data);
                 icon.innerHTML = icon()
                 document.querySelector('.current__wind-speed').innerHTML = `Ветер: ${data.wind.speed} kph`
                 document.querySelector('.current__humidity').innerHTML = `Влажность: ${data.main.humidity} %`
@@ -92,22 +91,12 @@ function weather() {
                 }
                 document.querySelector('.current__time').textContent = time()
                 document.querySelector('.current__date').textContent = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
-                // console.log(data);
             })
             .catch(() => {
                 alert('Этот город не найден')
                 city = london
                 inside()
                 searchInp.value = ''
-                // blockOne.style.border = '0px solid rgb(243, 243, 243)'
-                // blockTwo.style.border = '0px solid rgb(243, 243, 243)'
-                // blockOne.style.backgroundColor = ''
-                // blockTwo.style.backgroundColor = ''
-                // document.querySelector('.weather-forecast__next_date_1').classList.remove('next-date')
-                // document.querySelector('.weather-forecast__next_date_2').classList.remove('next-date')
-                // document.querySelector('.weather-forecast__next_date_3').classList.remove('next-date')
-                // document.querySelector('.weather-forecast__next_date_4').classList.remove('next-date')
-                // document.querySelector('.weather-forecast__next_date_5').classList.remove('next-date')
             })
 
 
